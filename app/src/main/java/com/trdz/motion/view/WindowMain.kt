@@ -8,9 +8,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.trdz.motion.databinding.FragmentWindowMainBinding
 import com.trdz.motion.utility.KEY_FINSTANCE
-import com.trdz.motion.view_model.MainViewModel
-import com.trdz.motion.view_model.StatusProcess
-import com.trdz.motion.view_model.ViewModelFactories
 import org.koin.android.ext.android.inject
 
 class WindowMain: Fragment() {
@@ -18,11 +15,6 @@ class WindowMain: Fragment() {
 
 	//region Injected
 	private val navigation: Navigation by inject()
-	private val factory: ViewModelFactories by inject()
-
-	private val viewModel: MainViewModel by viewModels {
-		factory
-	}
 
 	//endregion
 
@@ -60,33 +52,14 @@ class WindowMain: Fragment() {
 		initialize()
 	}
 
-	private fun prepInitialize() {
-		setViewModel()
-	}
+	private fun prepInitialize() {}
 
-	private fun setViewModel() {
-		val observer = Observer<StatusProcess> { renderData(it) }
-		viewModel.getData().observe(viewLifecycleOwner, observer)
-	}
 
 	//endregion
 
 	//region Main functional
 
-	private fun initialize() {
-		buttonBinds()
-		}
-
-	private fun buttonBinds() {
-		}
-
-	private fun renderData(material: StatusProcess) {
-		when (material) {
-			StatusProcess.Load -> {}
-			is StatusProcess.Error -> {}
-			is StatusProcess.Success -> {}
-		}
-	}
+	private fun initialize() {}
 
 	//endregion
 

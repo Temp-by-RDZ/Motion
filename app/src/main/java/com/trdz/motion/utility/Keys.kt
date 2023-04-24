@@ -22,10 +22,3 @@ const val PARAM_WINDOW_5= "PWP5"
 //Pager bobles
 const val KEY_FINSTANCE	= "FINST"
 const val KEY_PREFIX	= "PREFX"
-//Pager Fragment codes
-const val WIN_CODE_POE	= "POE"
-const val WIN_CODE_POD	= "POD"
-const val WIN_CODE_POM	= "POM"
-//Pager animations
-const val CONST_MIN_SCALE = 0.85f
-const val CONST_MIN_ALPHA = 0.5f
